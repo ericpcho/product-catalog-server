@@ -9,6 +9,10 @@
   "author": "Eric Pcholinski",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.4",
+    "morgan": "^1.9.0"
   }
 }
