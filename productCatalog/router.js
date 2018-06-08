@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { Products } = require('./models');
 const router = express.Router();
-const jsonParser = bodyParser.json();
+const jsonParser = bodyParser.json({limit: "1000kb"});
 
 // Anyone Get
 router.get('/', (req, res) => {
@@ -20,7 +20,7 @@ router.post('/', jsonParser, (req, res) => {
   const newProducts = req.body
 
   Products
-    .insertMany(newProducts, function(error, docs) {})
+    .insertMany(newProducts)
     .then(product => {
       res.status(201).json(product);
     })

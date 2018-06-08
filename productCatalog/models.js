@@ -7,13 +7,13 @@ mongoose.Promise = global.Promise;
 
 const ProductSchema = mongoose.Schema({
   project_id: {
-    type: Number
+    type: String
 },
   status: {
-    type: Number
+    type: String
   },
   isbn: {
-    type: Number
+    type: String
   },
   title: {
     type: String
@@ -25,7 +25,7 @@ const ProductSchema = mongoose.Schema({
     type: String
   },
   price: {
-    type: Number
+    type: String
   },
   categories: {
     type: String
@@ -46,19 +46,19 @@ const ProductSchema = mongoose.Schema({
     type: String,
   },
   page_count: {
-    type: Number,
+    type: String,
   },
   illustration_count: {
-    type: Number,
+    type: String,
   },
   press_release: {
     type: String,
   },
   media_hits: {
-    type: Number,
+    type: String,
   },
   series: {
-    type: Number,
+    type: String,
   },
   trim_size: {
     type: String,
@@ -76,7 +76,7 @@ const ProductSchema = mongoose.Schema({
     type: String,
   },
   year: {
-    type: Number
+    type: String
   },
   season: {
     type: String
@@ -97,7 +97,7 @@ const ProductSchema = mongoose.Schema({
     type: String
   },
   sales_price: {
-    type: Number
+    type: String
   },
   sales_price_dates_from: {
     type: Date
@@ -145,13 +145,13 @@ const ProductSchema = mongoose.Schema({
     type: String,
   },
   pieces: {
-    type: Number,
+    type: String,
   },
   skill: {
     type: String,
   },
   upc: {
-    type: Number,
+    type: String,
   }
 });
 
