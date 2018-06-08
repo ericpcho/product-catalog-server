@@ -16,8 +16,13 @@ router.get('/', (req, res) => {
 });
 
 // Anyone Post
-router.post('/', jsonParser, (req, res) => {
+router.put('/', jsonParser, (req, res) => {
   const newProducts = req.body
+
+  Products
+    .remove({}, function(err) { 
+      console.log('collection removed') 
+  })
 
   Products
     .insertMany(newProducts)
