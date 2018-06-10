@@ -5,6 +5,8 @@ const morgan = require('morgan');
 const cors = require('cors'); 
 const { PORT, CLIENT_ORIGIN, DATABASE_URL} = require('./config');
 const { router: productRouter } = require('./productCatalog');
+const { router: externalCatalogs } = require('./externalCatalogs');
+
 const app = express(); 
 
 mongoose.Promise = global.Promise; 
@@ -21,7 +23,9 @@ app.use(
   })
 );
 
-app.use('/', productRouter)
+app.use('/api/home', productRouter)
+app.use('/api/catalogs', externalCatalogs)
+
 
 let server; 
 function runServer() {
