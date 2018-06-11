@@ -30,10 +30,10 @@ router.post('/', jsonParser, (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Menus
+    ExternalCatalogs
       .findById(req.params.id)
-      .then(menu => {
-        res.status(200).json(menu);
+      .then(catalog => {
+        res.status(200).json(catalog);
       })
       .catch(() => {
         res.status(500).json({error: 'Something went wrong'}); 
