@@ -13,6 +13,9 @@ const app = express();
 
 mongoose.Promise = global.Promise; 
 
+const path = require("path");
+app.use(express.static(path.join(__dirname, "client/build")))
+
 app.use(
   morgan(process.env.NODE_ENV === 'production' ? 'common' : 'dev', {
     skip: (req, res) => process.env.NODE_ENV === 'test'
